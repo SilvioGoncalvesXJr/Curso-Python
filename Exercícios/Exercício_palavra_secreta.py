@@ -39,16 +39,21 @@ while True:
         print(f"Acertou em {numero_tentativas} tentativas")
         menu_final = input("escolha as opções:\n Deseja jogar novamente?(1)\n Deseja encerrar o jogo?(2) ")
         
-        # while menu_final != '1' or menu_final != '2':
-        #     print("Favor, escolher 1 ou 2")
+          
+        if menu_final == '1':
+            letras_acertadas = ''
+            numero_tentativas = 0            
+        
+        if menu_final == '2':
+            break
+        
+        # while menu_final != str(1) or menu_final != str(2):
+        #     print("-" * 10)
+        #     print("Escolha as opções corretas")
+        #     print("-" * 10)
         #     menu_final = input("escolha as opções:\n Deseja jogar novamente?(1)\n Deseja encerrar o jogo?(2) ")
-            
-        # if menu_final == '1':
-        #     letras_acertadas = ''
-        #     numero_tentativas = 0
-            
-        # if menu_final == '2':
-        #     break
+        #     print(type(menu_final))
+        # Fica dando pau, pq sempre cai no loop e não sai
 
 
 
