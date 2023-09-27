@@ -43,3 +43,11 @@ lista3.insert(4, 5)
 lista3.insert(100000, 29)
 print(lista3) #No método insert, nesse caso não dará erro, por ele analisar a posição em si, mas qual valor é maior e anexar
 print(lista3[5])
+
+#Fundir listas
+lista_a = [ 1,2,3]
+lista_b = [4,5,6]
+lista_c = lista_a + lista_b
+#OU
+lista_a.extend(lista_b)
+print(lista_a, lista_c)
