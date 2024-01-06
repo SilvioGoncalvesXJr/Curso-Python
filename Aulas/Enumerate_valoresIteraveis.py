@@ -9,7 +9,8 @@ for item in lista_enumerada:
     print(item)
 
 print('-' * 30)
-#Porém, depois de usado o enumerate, a variável é 'zerado', impedindo que seja utilizado novamente. Para isso, ou usa dentro do loop ou converte
+#Porém, depois de usado o enumerate, a variável é 'zerado', impedindo que seja utilizado novamente. Para isso, ou usa dentro do loop 
+# (sempre fica criando um novo interator impedido que esgote) ou converte para lista ou tupla
 
 for item in lista_enumerada:
     print(f"Não tem resultado {item}") #nem entra no loop
