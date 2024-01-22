@@ -30,3 +30,4 @@ print('-' * 30)
 for indice, nome in enumerate(lista):
     print(f"O indice é {indice}\n \t e o nome é {nome}")
     #\n quebra linha e \t da um tab
+    #asdasdasd
