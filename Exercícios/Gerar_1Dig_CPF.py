@@ -26,6 +26,7 @@ O primeiro dígito do CPF é 7
 
 lista = []
 listaint = []
+listaintAtt = []
 
 cpf = input("Informe um cpf válido: ")
 
@@ -47,7 +48,6 @@ for i in lista:
 print(listaint)
 
 valor = 10
-listaintAtt = []
 for i in listaint:
     listaintAtt.append(i*valor)
     valor -= 1
@@ -85,3 +85,18 @@ print(f'O primeiro dígito é {primeiro_digito}')
 # for i in cpf_separado:
 #     lista.append(int(i))
 # print(lista)
+
+
+#---------------------------------------------------------------------------------------------------
+#Solução Professor
+cpf = '74682489070'
+nove_digitos = cpf[:9]
+contador_regressivo_1 = 10
+
+resultado_digito_1 = 0
+for digito_1 in nove_digitos:
+    resultado_digito_1 += int(digito_1) * contador_regressivo_1
+    contador_regressivo_1 -= 1
+digito_1 = (resultado_digito_1 * 10) % 11
+digito_1 = digito_1 if digito_1 <=9 else 0
+print(digito_1)
