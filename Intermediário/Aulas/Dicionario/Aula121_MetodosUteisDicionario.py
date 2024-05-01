@@ -29,7 +29,7 @@ for chave, valor in pessoa.items():
     print(chave, valor)"""
 
 #5)setdefault - adiciona valor se a chave não existe. Se existir, o valor pardrão setado será desconsiderado
-"""pessoa.setdefault('idade', None)
+"""pessoa.setdefault('idade', None) Assim, deixar a idade em branco, será atribuído o valor 'None'(pode ser qualquer um que eu quiser), caso coloque, ficará o adicionado no cadastro
 print(pessoa['idade'])"""
 
 #6)Copy - Retorna uma cópia rasa (shallow copy)
