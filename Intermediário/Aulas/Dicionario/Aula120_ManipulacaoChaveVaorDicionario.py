@@ -2,6 +2,7 @@
 pessoa = {}
 
 chave = 'nome'
+#Isso é chamado de chave dinâmica
 
 pessoa[chave] = 'Luiz Otávio'
 pessoa['sobrenome'] = 'Miranda'
