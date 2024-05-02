@@ -7,52 +7,52 @@ import time, sys, os
 
 perguntas = [
     {
-        'Pergunta 1': 'Qual a minha comida preferida?',
+        'Pergunta': 'Qual a minha comida preferida?',
         'Opções': ['Pizza', 'Baião', 'Cuzcuz', 'Hamburguer'],
         'Gabarito': 'Baião',
     },
     {
-        'Pergunta 2': 'Qual a minha obra de Ficção Preferida?',
+        'Pergunta': 'Qual a minha obra de Ficção Preferida?',
         'Opções': ['Game of Thrones', 'Senhor dos Aneis', 'One Piece', 'Naruto'],
         'Gabarito': 'One Piece',
     },
     {
-        'Pergunta 3': 'Antes do Snoopy, eu tinha uma cadela, a Princesa. Qual a raça dela?',
+        'Pergunta': 'Antes do Snoopy, eu tinha uma cadela, a Princesa. Qual a raça dela?',
         'Opções': ['Poodle', 'SRD', 'Salsicha', 'Pincher'],
         'Gabarito': 'Poodle',
     },
     {
-        'Pergunta 4': 'Qual foi o ritmo da minha primeira aula de dança?',
+        'Pergunta': 'Qual foi o ritmo da minha primeira aula de dança?',
         'Opções': ['Salsa', 'Samba', 'Bachata', 'Forró'],
         'Gabarito': 'Forró',
     },
     {
-        'Pergunta 5': 'Qual estado da região norte do país que já visitei a trabalho?',
+        'Pergunta': 'Qual estado da região norte do país que já visitei a trabalho?',
         'Opções': ['Amapá', 'Pará', 'Amazonas', 'Acre'],
         'Gabarito': 'Amapá',
     },
     {
-        'Pergunta 6': 'Qual o ano em que nasci?',
+        'Pergunta': 'Qual o ano em que nasci?',
         'Opções':['1994', '1995', '1996', '1997'],
         'Gabarito': '1995',
     },
     {
-        'Pergunta 7': 'Agora, qual o mês?',
+        'Pergunta': 'Agora, qual o mês?',
         'Opções': ['Setembro', 'Outubro', 'Novembro', 'Dezembro'],
         'Gabarito': 'Outubro',
     },
     {
-        'Pergunta 8': 'Qual o dia do meu aniversário?',
+        'Pergunta': 'Qual o dia do meu aniversário?',
         'Opções': ['27','17','07','16'],
         'Gabarito':'27',
     },
     {
-        'Pergunta 9': 'Quando foi a primeira vez que eu disse que te amava?',
+        'Pergunta': 'Quando foi a primeira vez que eu disse que te amava?',
         'Opções': ['Na praia', 'Na minha casa', 'No meu carro', 'No banco do teu prédio'],
         'Gabarito': 'No meu carro',
     },
     {
-        'Pergunta 10': 'Qual o nome do Motel que tivemos nossa primeira vez?',
+        'Pergunta': 'Qual o nome do Motel que tivemos nossa primeira vez?',
         'Opções':['Perfume', 'Container', 'Le Chalet', 'Chalex'],
         'Gabarito': 'Perfume',
     }
@@ -87,7 +87,10 @@ else:
     os.system('cls')
     sys.exit()
 
-
+for pergunta in perguntas:
+    print(pergunta.get('Pergunta'))
+    for itens in pergunta:
+        print(pergunta.get('Opções'))
 
 
         
