@@ -61,7 +61,6 @@ def verificar(escolha):
     flag = 0
     while flag == 0:
         if escolha == '0' or escolha == '1' or escolha == '2' or escolha == '3':
-            print('ok')
             flag =+ 1
         else:
             print('Favor, escolher uma das opções apresentadas, entre 0 e 3')
@@ -70,27 +69,32 @@ def verificar(escolha):
 
 
 
-print("Seja Bem Vinda ao jogo ao cara mais gostoso que já viu ;)")
-# time.sleep(5)
+print("Seja Bem Vinda ao meu de perguntas e respostas ;)")
+time.sleep(5)
+print()
+print("Não ganhará 1 Milhão de Reais, mas terá um prêmio legal...")
+time.sleep(5)
 print()
 print('Porém, existe uma condição para participar. Se errar mais que 30% das respostas, vai fazer algo que eu queira')
-# time.sleep(5)
+time.sleep(5)
 print()
-print('Mas, ao contrário, você terá o direito a pedir alguma coisa para mim')
-# time.sleep(5)
+print('Mas, ao contrário, você terá o direito des pedir alguma coisa para mim')
+time.sleep(5)
 print()
 concordar = input('Aceita? kkkk (s/n)')
 print()
 
 if concordar == 's':
     print('EITCHAAAAA. VAMOS LA KKKKK')
-    # time.sleep(5)
-    os.system('cls')
+    time.sleep(5)
+    os.system('clear')
 else:
     print("Ta bom então :')")
     time.sleep(5)
-    os.system('cls')
+    os.system('clear')
     sys.exit()
+
+score = 0
 
 for pergunta in perguntas:
     print(pergunta.get('Pergunta'))
@@ -102,11 +106,20 @@ for pergunta in perguntas:
     respostaint = int(resposta)
     if pergunta.get('Opções')[respostaint] == pergunta.get('Gabarito'):
         print("Acertou minha gostosa")
+        score += 1
         time.sleep(3)
+        os.system('clear')
+
     else:
         print('Errouuuu')
         time.sleep(3)
-    
+        os.system('clear')
 
-
-        
+porcentagem = score * 10
+ganhou = 0
+if porcentagem >= 70:
+    ganhou = "Peça o que quiser"
+else:
+    ganhou = "Vou pensar no que eu quero hehehehe"
+print(f'Meu amor, dentre 10 perguntas, você acertou {score}, logo atingiu porcentagem de {porcentagem}%')
+print(ganhou)
