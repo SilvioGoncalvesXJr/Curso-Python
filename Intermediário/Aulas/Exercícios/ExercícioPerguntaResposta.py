@@ -58,12 +58,17 @@ perguntas = [
     }
 ]
 def verificar(escolha):
-    if escolha == '0' or escolha == '1' or escolha == '2' or escolha == '3':
-        print('ok')
-        return 'ok'
-    else:
-        print('Favor, escolher uma das opções apresentadas, entre 0 e 3')
-        return 'Não ok'
+    flag = 0
+    while flag == 0:
+        if escolha == '0' or escolha == '1' or escolha == '2' or escolha == '3':
+            print('ok')
+            flag =+ 1
+        else:
+            print('Favor, escolher uma das opções apresentadas, entre 0 e 3')
+            escolha = input('Qual a sua resposta?')
+    return 'ok'
+
+
 
 print("Seja Bem Vinda ao jogo ao cara mais gostoso que já viu ;)")
 # time.sleep(5)
@@ -89,8 +94,19 @@ else:
 
 for pergunta in perguntas:
     print(pergunta.get('Pergunta'))
-    for itens in pergunta:
-        print(pergunta.get('Opções'))
+    itens = pergunta.get('Opções')
+    for posicao in range(len(itens)):
+        print(posicao, itens[posicao])
+    resposta = input('Qual a sua resposta?')
+    verificar(resposta)
+    respostaint = int(resposta)
+    if pergunta.get('Opções')[respostaint] == pergunta.get('Gabarito'):
+        print("Acertou minha gostosa")
+        time.sleep(3)
+    else:
+        print('Errouuuu')
+        time.sleep(3)
+    
 
 
         
