@@ -109,7 +109,7 @@ if concordar == 's':
 else:
     print("Ta bom então :')")
     time.sleep(5)
-    os.system('clear')
+    os.system('cls')
     sys.exit()
 
 score = 0
