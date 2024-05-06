@@ -58,28 +58,35 @@ perguntas = [
     }
 ]
 def verificar(escolha):
-    if escolha == '0' or escolha == '1' or escolha == '2' or escolha == '3':
-        print('ok')
-        return 'ok'
-    else:
-        print('Favor, escolher uma das opções apresentadas, entre 0 e 3')
-        return 'Não ok'
+    flag = 0
+    while flag == 0:
+        if escolha == '0' or escolha == '1' or escolha == '2' or escolha == '3':
+            flag =+ 1
+        else:
+            print('Favor, escolher uma das opções apresentadas, entre 0 e 3')
+            escolha = input('Qual a sua resposta?')
+    return 'ok'
 
-print("Seja Bem Vinda ao jogo ao cara mais gostoso que já viu ;)")
-# time.sleep(5)
+
+
+print("Seja Bem Vinda ao meu de perguntas e respostas ;)")
+time.sleep(5)
+print()
+print("Não ganhará 1 Milhão de Reais, mas terá um prêmio legal...")
+time.sleep(5)
 print()
 print('Porém, existe uma condição para participar. Se errar mais que 30% das respostas, vai fazer algo que eu queira')
-# time.sleep(5)
+time.sleep(5)
 print()
-print('Mas, ao contrário, você terá o direito a pedir alguma coisa para mim')
-# time.sleep(5)
+print('Mas, ao contrário, você terá o direito des pedir alguma coisa para mim')
+time.sleep(5)
 print()
 concordar = input('Aceita? kkkk (s/n)')
 print()
 
 if concordar == 's':
     print('EITCHAAAAA. VAMOS LA KKKKK')
-    # time.sleep(5)
+    time.sleep(5)
     os.system('cls')
 else:
     print("Ta bom então :')")
@@ -87,10 +94,73 @@ else:
     os.system('cls')
     sys.exit()
 
+score = 0
+
 for pergunta in perguntas:
     print(pergunta.get('Pergunta'))
-    for itens in pergunta:
-        print(pergunta.get('Opções'))
+    itens = pergunta.get('Opções')
+    for posicao in range(len(itens)):
+        print(posicao, itens[posicao])
+    resposta = input('Qual a sua resposta?')
+    verificar(resposta)
+    respostaint = int(resposta)
+    if pergunta.get('Opções')[respostaint] == pergunta.get('Gabarito'):
+        print("Acertou minha gostosa")
+        score += 1
+        time.sleep(3)
+        os.system('cls')
+
+    else:
+        print('Errouuuu')
+        time.sleep(3)
+        os.system('cls')
+
+porcentagem = score * 10
+ganhou = 0
+if porcentagem >= 70:
+    ganhou = "Peça o que quiser"
+else:
+    ganhou = "Vou pensar no que eu quero hehehehe"
+print(f'Meu amor, dentre 10 perguntas, você acertou {score}, logo atingiu porcentagem de {porcentagem}%')
+print(ganhou)
 
 
-        
+# ------------------------------------------------------------------------------------------------------------------------------
+#Versão Professor
+
+qtd_acertos = 0
+for pergunta in perguntas:
+    print('Pergunta:', pergunta['Pergunta'])
+    print()
+
+    opcoes = pergunta['Opções']
+    for i, opcao in enumerate(opcoes):
+        print(f'{i})', opcao)
+    print()
+
+    escolha = input('Escolha uma opção: ')
+
+    acertou = False
+    escolha_int = None
+    qtd_opcoes = len(opcoes)
+
+    if escolha.isdigit():
+        escolha_int = int(escolha)
+
+    if escolha_int is not None:
+        if escolha_int >= 0 and escolha_int < qtd_opcoes:
+            if opcoes[escolha_int] == pergunta['Resposta']:
+                acertou = True
+
+    print()
+    if acertou:
+        qtd_acertos += 1
+        print('Acertou 👍')
+    else:
+        print('Errou ❌')
+
+    print()
+
+
+print('Você acertou', qtd_acertos)
+print('de', len(perguntas), 'perguntas.')
