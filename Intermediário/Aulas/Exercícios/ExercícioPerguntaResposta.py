@@ -68,22 +68,6 @@ def verificar(escolha):
     return 'ok'
 
 
-    flag = 0
-    while flag == 0:
-        if escolha == '0' or escolha == '1' or escolha == '2' or escolha == '3':
-            flag =+ 1
-        else:
-            print('Favor, escolher uma das opções apresentadas, entre 0 e 3')
-            escolha = input('Qual a sua resposta?')
-    return 'ok'
-
-
-
-print("Seja Bem Vinda ao meu de perguntas e respostas ;)")
-time.sleep(5)
-print()
-print("Não ganhará 1 Milhão de Reais, mas terá um prêmio legal...")
-time.sleep(5)
 print("Seja Bem Vinda ao meu de perguntas e respostas ;)")
 time.sleep(5)
 print()
@@ -92,10 +76,7 @@ time.sleep(5)
 print()
 print('Porém, existe uma condição para participar. Se errar mais que 30% das respostas, vai fazer algo que eu queira')
 time.sleep(5)
-time.sleep(5)
 print()
-print('Mas, ao contrário, você terá o direito des pedir alguma coisa para mim')
-time.sleep(5)
 print('Mas, ao contrário, você terá o direito des pedir alguma coisa para mim')
 time.sleep(5)
 print()
@@ -111,8 +92,6 @@ else:
     time.sleep(5)
     os.system('cls')
     sys.exit()
-
-score = 0
 
 score = 0
 
