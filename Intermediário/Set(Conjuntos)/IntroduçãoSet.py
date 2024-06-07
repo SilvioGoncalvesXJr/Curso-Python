@@ -2,6 +2,7 @@
 Sets - São estruturas de dados estruturados em conjuntos matemáticos em Python
 Representados graficamente pelo diagrama de Venn
 Sets em python são mutáveis, porém aceitam apenas tipos imutáveis como valor interno
+É interessante utilizar quando deseja operações rápidas e não ocupar muita memoria, em razão de apagar elementos repetidos
 '''
 #Criando um set
 s1 = set() # um set vazio
