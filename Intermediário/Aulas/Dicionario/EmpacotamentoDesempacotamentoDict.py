@@ -27,8 +27,8 @@ pessoas_completa = {**pessoa, **dados_pessoa}
 
 '''
 args e kwargs
-args -argumentos não nomeados variáveis
-kwargs = keyword arguments - Argumeentos Nomeados
+args - argumentos não nomeados variáveis
+kwargs = keyword arguments - Argumentos Nomeados
 '''
 
 def mostro_argumentos_nomeados(*args, **kwargs):#No kwargs, se usa os dois '*'
@@ -37,7 +37,7 @@ def mostro_argumentos_nomeados(*args, **kwargs):#No kwargs, se usa os dois '*'
     for chave, valor in kwargs.items():
         print(chave, valor)
 
-mostro_argumentos_nomeados(nome='Joana', qualquer_coisa= 123)
+mostro_argumentos_nomeados(1, 2, nome='Joana', qualquer_coisa= 123)
 mostro_argumentos_nomeados(**pessoas_completa)
 
 configuracoes = {

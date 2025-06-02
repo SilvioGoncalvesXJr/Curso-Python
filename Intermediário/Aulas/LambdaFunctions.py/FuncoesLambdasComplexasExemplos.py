@@ -1,5 +1,8 @@
-def executa(funcao, *args):
+def executa(funcao, *args): #É recomendado criar uma função de execução para as funções lambdas, ao invés de executar diretamente
     return funcao(*args)
+
+#Função lambda é para coisas rápidas e fáceis. Se almentar a complexidade já fica confuso
+
 
 def soma(x, y):
     return x + y
@@ -20,7 +23,7 @@ print(
 )#diferentes formas de escrever a mesma função
 
 duplica = executa(
-    lambda m: lambda n: m * n, 2 #Pega a primeira função cria_multiplicador, o segundo lambda é o multiplica, retornando a mutiplicação dos dois
+    lambda m: lambda n: m * n, 2 #Pega a primeira função 'cria_multiplicador', o segundo lambda é a função interna 'multiplica', retornando a mutiplicação dos dois
 )
 
 print(
